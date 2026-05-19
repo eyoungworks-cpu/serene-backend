@@ -10,6 +10,7 @@ app = FastAPI(title=settings.PROJECT_NAME)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
+        "https://asylumcommand.netlify.app",
         "http://localhost:5174",
         "http://localhost:3001"
     ],
