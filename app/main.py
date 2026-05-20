@@ -61,16 +61,3 @@ def exec_list_tasks():
         resp.raise_for_status()
         tasks = resp.json()
     return ExecTaskListResponse(tasks=tasks)
-from services.account_service import create_account
-
-request = {
-    "platform": "Metricool",
-    "purpose": "Analytics for TikTok performance",
-    "justification": "Needed for content optimization",
-    "expected_roi": "10-20% increase in engagement",
-    "integration_plan": "Connect to Asylum dashboard",
-    "owner": "Asylum"
-}
-
-response = create_account(request)
-print(response)
